@@ -23,6 +23,7 @@ public class PointExtra extends Point {
 	public boolean equals(Object obj) {
 		if (!(obj instanceof PointExtra)) return false;
 		if (isEqualsInDifferentClass(obj)) return obj.equals(this);
+		if (!super.equals(obj)) return false;
 		PointExtra other = (PointExtra) obj;	
 		if (extra != other.extra) return false;
 		return true;

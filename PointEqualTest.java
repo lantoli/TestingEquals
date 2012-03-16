@@ -22,12 +22,15 @@ public class PointEqualTest {
 	@Test public void normalPointExtraEqualsExpections() {
 		PointExtra p1 = new PointExtra(10,20,30);
 		PointExtra p2 = new PointExtra(10,20,30);
-		PointExtra dif = new PointExtra(10,20,40);
+		PointExtra dif1 = new PointExtra(10,20,20);
+		PointExtra dif2 = new PointExtra(10,10,30);
 		assertEquals(p1,p2);
 		assertEquals(p2,p1);
 		assertEquals(p1,p1);
-		assertFalse(p1.equals(dif));
-		assertFalse(dif.equals(p1));
+		assertFalse(p1.equals(dif1));
+		assertFalse(dif1.equals(p1));
+		assertFalse(p1.equals(dif2));
+		assertFalse(dif2.equals(p1));
 	}
 
 	@Test public void symmetry() {
